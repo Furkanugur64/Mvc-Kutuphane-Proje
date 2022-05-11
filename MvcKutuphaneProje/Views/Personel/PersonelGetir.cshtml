@@ -1,0 +1,22 @@
+﻿@model MvcKutuphaneProje.Models.Entity.TBL_PERSONELLER
+@{
+    ViewBag.Title = "PersonelGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("PersonelGuncelle", "Personel", FormMethod.Post))
+{
+    <div class="form-group" style="margin-top:20px">
+        @Html.LabelFor(x => x.ID)
+        @Html.TextBoxFor(x => x.ID, new { @class = "Form-Control", @readonly = "readonly" })
+        <br />
+        <label>Kategori Adı</label>
+        @Html.TextBoxFor(x => x.PERSONEL, new { @class = "Form-Control" })
+    </div>
+    <div>
+        <button class="btn btn-warning" style="background-color:orangered; color:white" >Güncelle</button>
+        <a href="/Personel/Index/" class="btn btn-danger" style="background-color:red; color:white" >İptal</a>
+
+    </div>
+}

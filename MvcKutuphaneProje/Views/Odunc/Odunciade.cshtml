@@ -1,0 +1,40 @@
+﻿@model MvcKutuphaneProje.Models.Entity.TBL_HAREKETLER
+@{
+    ViewBag.Title = "Odunciade";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("OduncGuncelle", "Odunc", FormMethod.Post))
+{
+<div class="form-group" style="margin-top:20px">
+    <label>Hareket ID</label>
+    @Html.TextBoxFor(x => x.ID, new { @class = "Form-Control", @readonly = "readonly" })
+    <br />
+    <label>Kitap Adı</label>
+    @Html.TextBoxFor(x => x.TBL_KITAPLAR.AD, new { @class = "Form-Control" })
+    <br />
+    <label>Üye</label>
+    @Html.TextBoxFor(x => x.TBL_UYELER.AD, new { @class = "Form-Control" })
+    <br />
+    <label>Personel Adı</label>
+    @Html.TextBoxFor(x => x.TBL_PERSONELLER.PERSONEL, new { @class = "Form-Control" })
+    <br />
+    <label>Alış Tarihi</label>
+    @Html.TextBoxFor(x => x.ALISTARIH, "{0: dd.MM.yyyy}", new { @class = "Form-Control" })
+    <br />
+    <label>İade Edilmesi Gereken Tarih</label>
+    @Html.TextBoxFor(x => x.IADETARIH, "{0: dd.MM.yyyy}", new { @class = "Form-Control" })
+    <br />
+    <label>Verilen Tarih</label>
+    <input type="text" class="form-control" name="UYEGETIRTARIH" value="@DateTime.Now.ToShortDateString()" />
+    <br />
+    <label>Geç Gelen Gün Sayısı</label>
+    <input type="text" class="form-control" id="input1" value="@ViewBag.dgr" />
+</div>
+    <div>
+        <button class="btn btn-warning" style="background-color:orangered; color:white" >Ödünç Kitabı Geri Al</button>
+        <a href="/Odunc/Index/" style="background-color:red; color:white"  class="btn btn-danger">iptal</a>
+
+    </div>
+}
+

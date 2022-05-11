@@ -1,0 +1,43 @@
+﻿@model MvcKutuphaneProje.Models.Entity.TBL_UYELER
+@{
+    ViewBag.Title = "UyeGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("UyeGuncelle", "Uye", FormMethod.Post))
+{
+<div class="form-group" style="margin-top:20px">
+    <label>ID</label>
+    @Html.TextBoxFor(x => x.ID, new { @class = "Form-Control", @readonly = "readonly" })
+    <br />
+    <label>Üye Adı</label>
+    @Html.TextBoxFor(x => x.AD, new { @class = "Form-Control" })
+    <br />
+    <label>Üye Soyadı</label>
+    @Html.TextBoxFor(x => x.SOYAD, new { @class = "Form-Control" })
+    <br />
+    <label>Mail Adresi</label>
+    @Html.TextBoxFor(x => x.MAIL, new { @class = "Form-Control" })
+    <br />
+    <label>Kullanıcı Adı</label>
+    @Html.TextBoxFor(x => x.KULLANICIADI, new { @class = "Form-Control" })
+    <br />
+    <label>Şifre</label>
+    @Html.TextBoxFor(x => x.SIFRE, new { @class = "Form-Control" })
+    <br />
+    <label>Fotoğraf Linki</label>
+    @Html.TextBoxFor(x => x.FOTOGRAF, new { @class = "Form-Control" })
+    <br />
+    <label>Telefon</label>
+    @Html.TextBoxFor(x => x.TELEFON, new { @class = "Form-Control" })
+    <br />
+    <label>Okul</label>
+    @Html.TextBoxFor(x => x.OKUL, new { @class = "Form-Control" })
+    
+</div>
+    <div>
+        <button class="btn btn-warning" style="background-color:orangered; color:white" >Güncelle</button>
+        <a href="/Uye/Index/" class="btn btn-danger" style="background-color:red; color:white" >İptal</a>
+
+    </div>
+}

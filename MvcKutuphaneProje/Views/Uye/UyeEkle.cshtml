@@ -1,0 +1,46 @@
+﻿@model MvcKutuphaneProje.Models.Entity.TBL_UYELER
+
+    @{
+        ViewBag.Title = "UyeEkle";
+        Layout = "~/Views/Shared/Layout.cshtml";
+    }
+
+<form class="form-group" method="post">
+    <div style="margin-bottom:15px; margin-top:15px">
+        <label>Üye Adı</label>
+        @Html.TextBoxFor(k => k.AD, new { @class = "Form-Control" })
+        @Html.ValidationMessageFor(x => x.AD, "", new { @style = "color:red" })
+    </div>
+    <div style="margin-bottom:15px; margin-top:15px">
+        <label>Üye Soyadı</label>
+        @Html.TextBoxFor(k => k.SOYAD, new { @class = "Form-Control" })
+    </div>
+    <div style="margin-bottom:15px; margin-top:15px">
+        <label>Mail Adresi</label>
+        @Html.TextBoxFor(k => k.MAIL, new { @class = "Form-Control" })
+    </div>
+    <div style="margin-bottom:15px; margin-top:15px">
+        <label>Kullanıcı Adı</label>
+        @Html.TextBoxFor(k => k.KULLANICIADI, new { @class = "Form-Control" })
+    </div>
+    <div style="margin-bottom:15px; margin-top:15px">
+        <label>Şifre</label>
+        @Html.TextBoxFor(k => k.SIFRE, new { @class = "Form-Control" })
+        @Html.ValidationMessageFor(x => x.SIFRE, "", new { @style = "color:red" })
+    </div>
+    <div style="margin-bottom:15px; margin-top:15px">
+        <label>Fotoğraf linki</label>
+        @Html.TextBoxFor(k => k.FOTOGRAF, new { @class = "Form-Control" })
+    </div>
+    <div style="margin-bottom:15px; margin-top:15px">
+        <label>Telefon</label>
+        @Html.TextBoxFor(k => k.TELEFON, new { @class = "Form-Control" })
+    </div>
+    <div style="margin-bottom:15px; margin-top:15px">
+        <label>Okul Adı</label>
+        @Html.TextBoxFor(k => k.OKUL, new { @class = "Form-Control" })
+    </div>
+    <button class="btn btn-success" style="background-color:green; color:white" >Kaydet</button>
+    <a href="/Uye/Index/" class="btn btn-danger" style="background-color:red; color:white" >İptal</a>
+</form>
+

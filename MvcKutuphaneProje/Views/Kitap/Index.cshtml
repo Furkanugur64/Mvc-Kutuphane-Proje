@@ -1,0 +1,55 @@
+﻿@using MvcKutuphaneProje.Models.Entity
+@model List<TBL_KITAPLAR>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2 style="text-align:center; color:red">Kitap Listesi</h2>
+
+@using (Html.BeginForm("Index", "Kitap", FormMethod.Get))
+{
+    <div style="margin-bottom:20px; margin-top:20px; background-color:gray">
+        <table class="table table-bordered">
+            <tr>
+                <td>
+                    <b style="color:#160ed0">Aranacak Kitabı Girin:</b> @Html.TextBox("p")
+                    <input type="submit" value="Ara" style="background-color:darkblue; color:white" class="btn btn-primary" />
+                </td>
+            </tr>
+        </table>  
+        
+    </div>
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Kitap Adı</th>
+        <th>Kategori</th>
+        <th>Yazar</th>
+        <th>Basım Yılı</th>
+        <th>Yayınevi</th>
+        <th>Sayfa Sayısı</th>
+        <th>Durum</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.AD</td>
+            <td>@x.TBL_KATEGORILER.AD</td>
+            <td>@x.TBL_YAZARLAR.AD @x.TBL_YAZARLAR.SOYAD</td>
+            <td>@x.BASIMYIL</td>
+            <td>@x.YAYINEVI</td>
+            <td>@x.SAYFA</td>
+            <td>@x.DURUM</td>
+            <td><a href="/Kitap/KitapSil/@x.ID" style="background-color:red; color:white" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Kitap/KitapGetir/@x.ID" style="background-color:darkorange; color:white" class="btn btn-warning">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Kitap/KitapEkle/" style="background-color:dodgerblue; color:white" class="btn btn-primary">Yeni Kitap Ekle</a>
