@@ -2,7 +2,7 @@
 # MVC KÜTÜPHANE OTOMASYONU :books:
 
 Bu Proje Sql Server Management Studio 18 ve Visual Studio 2019 programları kullanılarak 
-Murat YÜCEDAĞ hocamızın Udemy üzerinden bulunan [Mvc5 ile 3 Panelli Kütüphane Yönetim Sistemi](https://www.udemy.com/course/mvc5-ile-3-panelli-kutuphane-yonetim-sistemi/ "Mvc5 ile 3 Panelli Kütüphane Yönetim Sistemi") kursu yardımıyla Mvc kullanılarak oluşturulmuştur. Projemizde vitrin kısmı bulunmaktadır. Projemizde toplamda 15 adet tablo ve ilişkiler kullanılmıştır.Login kısmında sessionlardan faydalanılmıştır.Ayrıca kitaplar sayfasında filtreleme işlemleride bulunmaktadır.
+Murat YÜCEDAĞ hocamızın Udemy üzerinde bulunan [Mvc5 ile 3 Panelli Kütüphane Yönetim Sistemi](https://www.udemy.com/course/mvc5-ile-3-panelli-kutuphane-yonetim-sistemi/ "Mvc5 ile 3 Panelli Kütüphane Yönetim Sistemi") kursu yardımıyla Mvc kullanılarak oluşturulmuştur. Projemizde vitrin kısmı bulunmaktadır. Projemizde toplamda 15 adet tablo ve ilişkiler kullanılmıştır.Login kısmında sessionlardan faydalanılmıştır.Ayrıca kitaplar sayfasında filtreleme işlemleride bulunmaktadır.
 
 
  ## Proje içi Görseller 
